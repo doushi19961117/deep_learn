@@ -193,7 +193,7 @@ class ConvolutionalAutoencoder(object):
 
 if __name__ == '__main__':
     autoencoder = ConvolutionalAutoencoder(320, 256, 3,
-                                           img_floder_path=r'C:\Users\10651\Desktop\潘海辉\total_img',
+                                           img_floder_path=r'C:\Users\yangqing\Desktop\潘海辉\total_img',
                                            model_path='convolutional_autoencoder.h5',
                                            epochs=80,
                                            batch_size=4,

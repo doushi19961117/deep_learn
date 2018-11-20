@@ -92,7 +92,8 @@ class VariationalAutoEncoder(object):
         encoder.summary()
         # 创建decoder
         latent_input = Input(shape=(self.laten_dim,), name='z_sampling')
-        x = Dense(units=np.prod(x_shape), activation=activation_function)(latent_input)
+        n = np.prod(x_shape)
+        x = Dense(units=n, activation=activation_function)(latent_input)
         x = Reshape(target_shape=x_shape)(x)
         x = UpSampling2D((2, 2))(x)
         x = Conv2D(16, (3, 3), activation=activation_function, padding='same')(x)
